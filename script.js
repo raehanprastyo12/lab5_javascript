@@ -39,3 +39,16 @@ case "4": alert("Bilangan empat"); break;
 case "5": alert("Bilangan lima"); break;
 default: alert("Pilihan tidak tersedia");
 }
+
+function cekBilangan() {
+const input = document.getElementById("bilangan").value;
+const angka = Number(input);
+const hasil = document.getElementById("hasilBilangan");
+if (input.trim() === "" || !Number.isInteger(angka)) {
+hasil.textContent = "Masukkan bilangan bulat yang valid.";
+} else if (angka % 2 === 0) {
+hasil.textContent = "Bilangan genap";
+} else {
+hasil.textContent = "Bilangan ganjil";
+}
+}
