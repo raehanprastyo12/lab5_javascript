@@ -57,3 +57,14 @@ function ubahWarnaLatar(warna) {
 document.body.style.backgroundColor = warna;
 }
 
+const daftarMenu = document.querySelectorAll(".menu");
+daftarMenu.forEach((item) => {
+item.addEventListener("change", hitungTotal);
+});
+function hitungTotal() {
+let total = 0;
+daftarMenu.forEach((item) => {
+if (item.checked) total += Number(item.value);
+});
+document.getElementById("total").textContent = total.toLocaleString("id-ID");
+}
