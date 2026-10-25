@@ -52,3 +52,8 @@ hasil.textContent = "Bilangan genap";
 hasil.textContent = "Bilangan ganjil";
 }
 }
+
+function ubahWarnaLatar(warna) {
+document.body.style.backgroundColor = warna;
+}
+
